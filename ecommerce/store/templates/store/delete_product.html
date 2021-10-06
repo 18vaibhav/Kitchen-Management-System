@@ -1,0 +1,15 @@
+{% extends 'store/main.html' %}
+{% block title %}Delete Product{% endblock %}
+
+{% block content %}
+<section class="portfolio-block contact">
+    <div class="container">
+        <form method="post">
+            <h2>Delete Product "{{ object.name }}"</h2>
+            {% csrf_token %}
+            <p>Are you sure you want to delete "{{ object }}"?</p>
+            <div class="form-group"><button class="btn btn-primary " type="submit">Confirm</button></div>
+        </form>
+    </div>
+</section>
+{% endblock %}
